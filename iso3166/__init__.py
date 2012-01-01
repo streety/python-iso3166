@@ -266,7 +266,7 @@ def _build_index(idx):
 _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
-
+_by_fullname = _build_index(0)
 
 class _CountryLookup(object):
     def get(self, key):
@@ -280,6 +280,8 @@ class _CountryLookup(object):
             return _by_numeric[k]
         elif len(k) == 3:
             return _by_alpha3[k]
+        else:
+            return _by_fullname[key]
 
         raise ValueError()
 
