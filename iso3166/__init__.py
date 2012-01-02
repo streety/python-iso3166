@@ -257,7 +257,8 @@ _records = [
     Country(u"Western Sahara", "EH", "ESH", "732"),
     Country(u"Yemen", "YE", "YEM", "887"),
     Country(u"Zambia", "ZM", "ZMB", "894"),
-    Country(u"Zimbabwe", "ZW", "ZWE", "716")]
+    Country(u"Zimbabwe", "ZW", "ZWE", "716"),
+    Country(u"Curacao", "CW", "CUW", "531"),]
 
 
 def _build_index(idx):
@@ -267,6 +268,17 @@ _by_alpha2 = _build_index(1)
 _by_alpha3 = _build_index(2)
 _by_numeric = _build_index(3)
 _by_fullname = _build_index(0)
+
+# Cover alternative names
+_by_fullname['United Emirates'] = _by_fullname['United Arab Emirates']
+_by_fullname['Republic of Ireland'] = _by_fullname['Ireland']
+_by_fullname['Taiwan'] = _by_fullname['Taiwan, Province of China']
+_by_fullname['Russia'] = _by_fullname['Russian Federation']
+_by_fullname['British Virgin Islands'] = _by_alpha2['VG']
+_by_fullname['Falkland Islands'] = _by_alpha2['FK']
+_by_fullname['Belize (British Honduras)'] = _by_fullname['Belize']
+_by_alpha2['UK'] = _by_alpha2['GB']
+
 
 class _CountryLookup(object):
     def get(self, key):
