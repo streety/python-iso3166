@@ -277,6 +277,8 @@ _by_fullname['Russia'] = _by_fullname['Russian Federation']
 _by_fullname['British Virgin Islands'] = _by_alpha2['VG']
 _by_fullname['Falkland Islands'] = _by_alpha2['FK']
 _by_fullname['Belize (British Honduras)'] = _by_fullname['Belize']
+_by_fullname['South Korea'] = _by_alpha2['KR']
+_by_fullname['Vietnam'] = _by_alpha2['VN']
 _by_alpha2['UK'] = _by_alpha2['GB']
 
 
